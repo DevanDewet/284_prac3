@@ -4,7 +4,7 @@
 ; Group member 03: Devan_Dewet_05169098
 ; ==========================
 
-section .text
+segment .text
     global calculateMatrixDotProduct
 
 calculateMatrixDotProduct:
