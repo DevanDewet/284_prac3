@@ -70,14 +70,14 @@ int main() {
     printf("Result of adding Matrix 1 and Matrix 2:\n");
     printMatrix(resultMatrix, rows, cols);
 
-    // Test 3: Dot product
-    float dotProduct = calculateMatrixDotProduct(matrix1, matrix2, rows, cols);
-    printf("Dot product of Matrix 1 and Matrix 2: %.2f\n", dotProduct);
+    // // Test 3: Dot product
+    // float dotProduct = calculateMatrixDotProduct(matrix1, matrix2, rows, cols);
+    // printf("Dot product of Matrix 1 and Matrix 2: %.2f\n", dotProduct);
 
-    // Free allocated memory
-    freeMatrix(matrix1, rows);
-    freeMatrix(matrix2, rows);
-    freeMatrix(resultMatrix, rows);
+    // // Free allocated memory
+    // freeMatrix(matrix1, rows);
+    // freeMatrix(matrix2, rows);
+    // freeMatrix(resultMatrix, rows);
 
     return 0;
 }

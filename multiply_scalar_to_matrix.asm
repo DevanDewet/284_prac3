@@ -17,26 +17,26 @@ multiplyScalarToMatrix:
     ; rsi = int rows
     ; rdx = int cols
 
-    ; Check if scalar is 1.0 (identity operation)
+
     movss xmm1, [rel one]
     ucomiss xmm0, xmm1
     je .done
 
-    ; Check if rows or cols is zero
+
     test rsi, rsi
     jz .done
     test rdx, rdx
     jz .done
 
-    ; Prepare for loop
+ 
     xor rcx, rcx  ; row counter
 
 .row_loop:
     xor r8, r8    ; column counter
-    mov r9, [rdi + rcx * 8]  ; Get the pointer to the current row
+    mov r9, [rdi + rcx * 8]  
 
 .col_loop:
-    ; Multiply scalar with matrix element
+
     movss xmm1, [r9 + r8 * 4]
     mulss xmm1, xmm0
     movss [r9 + r8 * 4], xmm1
